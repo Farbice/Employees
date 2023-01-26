@@ -1,0 +1,28 @@
+<h1>Liste des clients</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Numéro</th>
+            <th>Nom</th>
+            <th>Téléphone</th>
+            <th>Adresse</th>
+            <th>Ville</th>
+            <th>Code postal</th>
+            <th>Pays</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($customers as $customer): ?>
+            <tr>
+                <td><?= $customer['customerNumber'] ?></td>
+                <td><?= $customer['customerName'] ?></td>
+                <td><?= $customer['phone'] ?></td>
+                <td><?= $customer['addressLine1'] ?></td>
+                <td><?= $customer['city'] ?></td>
+                <td><?= $customer['postalCode'] ?></td>
+                <td><?= $customer['country'] ?></td>
+            </tr>
+        <?php endforeach ?>
+    </tbody>
+</table>
